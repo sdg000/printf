@@ -1,37 +1,16 @@
 #include "main.h"
 
 /**
- * print_binary - converts an unsigned int to binary
- * @num: int to be converted
- *
- * Return: no of resulting binary characters
+ * print_binary - function that prints the binary representation of a number
+ * @n: number to be printed in binary
+ * @printed: hold the number of characters printed
  */
-int print_binary(unsigned int num)
+void print_binary(unsigned int n, unsigned int *printed)
 {
-	int chars_printed = 0, idx = 0;
-	char bin[sizeof(unsigned int) * 8];
-
-	if (num == 0)
+	if (n > 1)
 	{
-		chars_printed += _putchar('0');
-		return (chars_printed);
+		*printed += 1;
+		print_binary(n >> 1, printed);
 	}
-	if (num == 1)
-	{
-		chars_printed += _putchar('1');
-		return (chars_printed);
-	}
-	while (num > 0)
-	{
-		bin[idx] = '0' + (num % 2);
-		num = num / 2;
-		idx++;
-	}
-	idx--;
-	while (idx >= 0)
-	{
-		chars_printed += _putchar(bin[idx]);
-		idx--;
-	}
-	return (chars_printed);
+	_putchar((n & 1) + '0');
 }
