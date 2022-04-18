@@ -1,2 +1,1 @@
-printf group
-Samuel and David 
+ALX printf project
