@@ -1,22 +1,12 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-#include <stdlib.h>
-#include <unistd.h>
+#ifndef HEADER_MAIN
+#define HEADER_MAIN
 #include <stdarg.h>
-
 int _putchar(char c);
+void _puts(char *str);
+int _strlen(char *s);
 int _printf(const char *format, ...);
-int print_num(long int n);
-int print_string(char *str);
-int print_binary(unsigned int num);
-int print_unknown_spec(char c);
-int print_odh(char c, unsigned int num);
-int dec_to_oct(unsigned int num);
-int dec_to_hex(char c, unsigned int num);
-int print_S(char *);
-int print_reverse(char *s);
-int print_rot13(char *c);
-int print_pointer(void *p);
-
-#endif
+char *convert_to(char representation[], unsigned int num, int base);
+int function_manager(char c, va_list arg);
+int _switch(char c, va_list arg);
+int print_character(va_list arg);
+int print_sign(va_list arg, int base);
