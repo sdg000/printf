@@ -1,1 +1,2 @@
-printf group 
+printf group
+Samuel and David 
