@@ -1,4 +1,4 @@
-This work was done by Samuel Asare and Seth David Gyimah on the 20th of April 2022 as part of a collaborative teamwork on the ALX software engineering program.
+This Prinf Group Project was done by Samuel Asare and Seth David Gyimah on the 20th of April 2022 as part of a collaborative teamwork on the ALX software engineering program.
 
 _printf is a simple custom printf function that formats and prints data to the standard output
 
